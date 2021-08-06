@@ -5,7 +5,7 @@ const INITIAL_STATE = {
 // Using es6 default value parameter to ensure currentState
 // is never undefined if reducer is called without state param
 const userReducer = (currentState = INITIAL_STATE, action) => {
-  switch (action) {
+  switch (action.type) {
     case "SET_CURRENT_USER":
       return {
         ...currentState,
