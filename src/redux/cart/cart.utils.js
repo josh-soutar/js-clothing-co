@@ -1,6 +1,6 @@
 export const addItemToCart = (cartItems, cartItemToAdd) => {
-  // .find() is an array function that returns found
-  // in the array that matches provided condition
+  // .find() is an array function that returns the
+  // first element in the array that matches provided condition
   const existingCartItem = cartItems.find((cartItem) => cartItem.id === cartItemToAdd.id);
 
   if (existingCartItem) {
