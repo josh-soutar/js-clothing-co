@@ -14,5 +14,6 @@ const COLLECTION_ID_MAP = {
 
 export const selectShopCollections = createSelector([selectShop], (shop) => shop.collections);
 
-export const selectCollection = (collectionUrlParam) =>
-  createSelector([selectShopCollections], (collections) => collections.find((collection) => collection.id === COLLECTION_ID_MAP[collectionUrlParam]));
+export const selectCollection = (collectionUrlParam) => {
+  return createSelector([selectShopCollections], (collections) => collections.find((collection) => collection.id === COLLECTION_ID_MAP[collectionUrlParam]));
+};
