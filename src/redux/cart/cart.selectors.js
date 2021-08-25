@@ -7,6 +7,7 @@ const selectCart = (state) => state.cart;
 //cartItems is a property on state.cart
 /* createSelector has 2 arguments
 1: An array of input selectors (in this example we only have 1, selectCart)
+The input selector can also be the output of createSelector, as seen with selectCartItems
 2: A function that returns the value we want out of the input selectors.
 The parameters of this function will be the selectors we're using to 
 produce the selectCartItems' return value (i.e. the selectors from the array in param 1)
