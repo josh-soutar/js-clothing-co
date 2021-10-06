@@ -14,16 +14,19 @@ const Header = ({ currentUser, hidden }) => (
   <HeaderContainer>
     <LogoContainer to="/">
       <Logo className="logo" />
+      <div style={{ width: "75px" }}>JS Clothing Co.</div>
     </LogoContainer>
 
-    <OptionsContainer>
-      <OptionLink to="/shop">SHOP</OptionLink>
-      <OptionLink to="/shop">CONTACT</OptionLink>
+    <div>
+      <OptionsContainer>
+        <OptionLink to="/shop">SHOP</OptionLink>
+        <OptionLink to="/shop">CONTACT</OptionLink>
 
-      {currentUser ? <OptionDiv onClick={() => auth.signOut()}>SIGN OUT</OptionDiv> : <OptionLink to="/signin">SIGN IN</OptionLink>}
-      <CartIcon />
-    </OptionsContainer>
-    {hidden ? null : <CartDropdown />}
+        {currentUser ? <OptionDiv onClick={() => auth.signOut()}>SIGN OUT</OptionDiv> : <OptionLink to="/signin">SIGN IN</OptionLink>}
+        <CartIcon />
+      </OptionsContainer>
+      {hidden ? null : <CartDropdown />}
+    </div>
   </HeaderContainer>
 );
 
